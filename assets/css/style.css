@@ -1740,7 +1740,8 @@ textarea.w-select {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-column-end: 2;
-    grid-row-end: 2
+    grid-row-end: 2;
+    color: white;
 }
 
 .w-richtext:after {
@@ -1926,6 +1927,7 @@ textarea.w-select {
     position: relative;
     float: right
 }
+
 
 [data-nav-menu-open] {
     display: block !important;
@@ -2283,7 +2285,7 @@ blockquote {
     margin: 0 0 10px;
     padding: 10px 20px;
     border-left: 5px solid #c88440;
-    color: #262727;
+    color: white;
     font-size: 18px;
     line-height: 22px;
     font-weight: 400
@@ -2737,6 +2739,251 @@ figcaption {
     transform: scale(1.1)
 }
 
+
+
+
+/* 
+---------------------------------------------
+Services Style
+--------------------------------------------- 
+*/
+
+.services {
+    padding-top: 130px;
+    position: relative;
+  }
+  
+  .services:after {
+    content: '';
+    /* background-image: url(../images/services-left-dec.jpg); */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 786px;
+    height: 1217px;
+    z-index: 0;
+  }
+  
+  .services:before {
+    content: '';
+    /* background-image: url(../images/services-right-dec.jpg); */
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 400px;
+    width: 161px;
+    height: 413px;
+    z-index: 0;
+  }
+  
+  .services .section-heading {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .services .section-heading .line-dec {
+    margin: 0 auto;
+  }
+  
+  .services .naccs {
+    position: relative;
+    z-index: 1;
+    width: auto;
+ 
+  }
+  
+  .services .icon {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .services .naccs .menu div h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+  }
+  
+  .services .icon img {
+    margin-bottom: 10px;
+    width: 60px;
+  }
+  
+  .services .naccs .menu {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .services .naccs .menu div {
+    color: #2a2a2a;
+    margin: 0px;
+    width: 15%;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .services .naccs .menu div .thumb {
+    display: inline-block;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: #fff;
+  }
+  
+  .services .naccs .menu div.active {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  }
+  
+  .services ul.nacc {
+    height: 100% !important;
+    position: relative;
+    min-height: 100%;
+    list-style: none;
+   
+    margin: 0;
+    padding: 0;
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .services ul.nacc li {
+    opacity: 0;
+    transform: translateX(-50px);
+    position: absolute;
+    list-style: none;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+  }
+  
+  .nacc .thumb .row{
+    display: flex;
+    gap:2rem;
+  }
+  .services ul.nacc li.active {
+    transition-delay: 0.3s;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transform: translateX(0px);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 80px 120px 50px 120px;
+    border: 2px solid white;
+  }
+  
+  .services ul.nacc li {
+    width: 100%;
+  }
+  
+  .services ul.nacc li .right-image img {
+    width: 520px;
+    float: right;
+  }
+  
+  .services .nacc .thumb h4 {
+    color: #2a2a2a;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+  
+  .services .nacc .thumb .main-white-button {
+    text-align: right;
+    margin-top: 40px;
+  }
+  
+  .services .nacc .thumb .main-white-button a {
+    background-color: #8d99af;
+    color: #fff;
+  }
+  
+  .services .nacc .thumb .main-white-button a i {
+    background-color: #fff;
+    color: #8d99af;
+  }
+  
+  .services .left-text h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: orange !important;
+  }
+  
+  .services .left-text p {
+    margin-bottom: 30px;
+ 
+  }
+
+  .services .left-text {
+
+    color: white !important;
+  }
+  
+  .nacc .ticks-list span {
+    display: inline-block;
+    opacity: 1;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    
+  }
+  
+  @media screen and (max-width:991px) {
+
+      .nacc .thumb .row{
+        flex-direction: column;
+        gap:2rem;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .services .naccs {
+
+        z-index: 1;
+        width: 98%;
+        margin-left: 1%;
+      }
+
+      .service-item {
+        text-align: center;
+        padding: 30px;
+      }
+      .service-item .icon {
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 15px;
+      }
+      .service-item .right-content {
+        display: inline-block;
+      }
+      .services .naccs .menu div .thumb {
+        padding: 5px;
+      }
+      .services .icon img {
+        margin: 0px;
+      }
+      .services ul.nacc li.active {
+        padding: 45px;
+        width:96%;
+        margin-left: 2%;
+      }
+      .services .naccs .menu div  {
+        font-size: 4px;
+      }
+      .services ul.nacc li .right-image img {
+        float: none;
+     }
+    
+    }
+
 .service-block {
     padding: 40px;
     border: 1px solid white;
@@ -2813,12 +3060,13 @@ figcaption {
 
 .project-text {
     opacity: .8;
-    color: #434343
+    color: white;
 }
 
 .project-title {
     margin-top: 16px;
-    margin-bottom: 18px
+    margin-bottom: 18px;
+    color: white;
 }
 
 .project-title:hover {
@@ -3264,7 +3512,8 @@ figcaption {
     color: #fff;
     font-size: 28px;
     line-height: 1em;
-    font-weight: 400
+    font-weight: 400;
+    font-family: Cabin Sketch;
 }
 
 .post-date {
@@ -3784,7 +4033,8 @@ figcaption {
 .project-rich-text {
     max-width: 1160px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    color: white;
 }
 
 .similar-projects-grid {
@@ -3904,6 +4154,8 @@ figcaption {
 }
 
 @media screen and (max-width:991px) {
+
+   
     .brand {
         padding-left: 0
     }
@@ -4099,7 +4351,7 @@ figcaption {
     }
 
     .subtitle-title {
-        margin-left: 0
+        margin-left: 20px
     }
 
     .service-title {
@@ -4691,6 +4943,11 @@ figcaption {
         grid-column-end: span 1
     }
 }
+
+
+
+
+
 
 @media screen and (max-width:479px) {
     .navbar {
